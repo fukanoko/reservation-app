@@ -1,18 +1,23 @@
-<div class="container">
-    <div class="myclass">
-    </div>
-      <div class="row">
-        <div *ngFor="let product of products; let productId = index" class="col-sm">
-            <a [routerLink]="[ product._id ]">
-              <div class="card">
-                  <img src="{{product.coverimg}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-title">{{product.name}}</p>
-                    <p class="card-text">{{ product.description }}</p>
-                  </div>
-              </div>
-            </a>         
-        </div>
-      </div>
+<div class="wrapper">
+  <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/phone-cover.jpg');">
+    <!-- <div class="filter"></div> -->
   </div>
-  
+  <div class="container">
+    <br>
+    <!-- <div class="myclass">
+    </div> -->
+    <div class="row">
+      <div *ngFor="let product of products; let productId = index" class="col-sm">
+        <a [routerLink]="[ product._id ]">
+          <div class="card">
+            <img src="{{product.coverimg}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">{{product.name}}</p>
+              <p class="card-text">{{ product.description }}</p>
+            </div>
+          </div>
+        </a>         
+      </div>
+    </div>
+  </div>
+</div>
